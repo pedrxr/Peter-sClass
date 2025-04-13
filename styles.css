@@ -1,92 +1,170 @@
+<link rel="stylesheet" href="style.css">
+
+/* Fuente estilo arcade retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo estilo videojuego */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #00ffcc;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-header {
-    background: #2a3d4f;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    color: #333;
-    margin-top: 30px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table th, table td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-table th {
-    background-color: #2a3d4f;
-    color: white;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.milestones ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.milestones li {
-    background-color: #ffcc00;
-    margin: 5px 0;
-    padding: 10px;
-    font-size: 1.2em;
-}
-
-footer {
-    background-color: #2a3d4f;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+/* Navegación superior */
 nav {
-  background-color: #1f1f2e;
+  background-color: #111;
+  padding: 15px;
+  border-bottom: 3px solid #00ffcc;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 8px;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffff00;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Títulos principales */
+h1, h2, h3 {
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Tarjetas visuales tipo "power box" */
+.card {
+  background-color: #222;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00ffcc99;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Tabla del leaderboard */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111;
+  color: #00ffcc;
+  font-size: 10px;
+}
+
+th, td {
+  border: 1px solid #00ffcc;
   padding: 10px;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+th {
+  background-color: #00ffcc;
+  color: #000;
 }
 
-nav ul li {
+/* Botones estilo retro */
+button, .btn {
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  padding: 12px 16px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
   display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
 }
 
-nav ul li a:hover {
-  color: #ffd700;
+button:hover, .btn:hover {
+  background-color: #ffcc00;
+}
+
+/* Secciones tipo "pantalla" */
+.section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 2px dashed #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffcc0055;
+}
+
+/* Lista de milestones */
+.milestone {
+  background-color: #111;
+  border-left: 6px solid #00ffcc;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 10px;
+}
+
+.milestone span {
+  color: #ffff00;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 8px;
+  color: #999;
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 9px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn, button {
+    font-size: 9px;
+    padding: 10px;
+  }
 }
